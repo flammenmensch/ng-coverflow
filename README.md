@@ -1,0 +1,1 @@
+# CoverFlow component for AngularJS
