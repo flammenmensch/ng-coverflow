@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Coverflow</title>
+    <link rel="stylesheet" href="../styles/ng-coverflow.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Helvetica Neue, Helvetica, Arial;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-controller="AppCtrl">
+    <ng-coverflow
+            header="Coverflow example"
+            zoom="75"
+            rotation="20"
+            brightness=".25"
+            offset="100"
+            wrap-around="false"
+            items="items"
+            selected-index="{{selectedIndex}}"
+            item-click="itemClickHandler(item)">
+    </ng-coverflow>
+</div>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../scripts/ng-coverflow.models.js"></script>
+<script src="../scripts/ng-coverflow.utils.js"></script>
+<script src="../scripts/ng-coverflow.js"></script>
+<script>
+    (function (ng) {
+        ng.module('app', [ 'ng-coverflow' ])
+                .controller('AppCtrl', [ '$scope', 'ngCoverflowItemFactory', function ($scope, itemFactory) {
+                    $scope.selectedIndex = 0;
+
+                    $scope.items = [
+                        itemFactory({ title:'Item 0', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 1', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 2', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 3', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 4', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 5', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 6', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 7', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 8', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() }),
+                        itemFactory({ title:'Item 9', subtitle:'Subtitle', imageUrl:'http://placekitten.com/g/200/200?' + Math.random().toString() })
+                    ];
+
+                    $scope.itemClickHandler = function (item) {
+                        console.log('Item ' + item.title + ' was clicked');
+                    };
+                } ]);
+    } (angular));
+</script>
+</body>
+</html>

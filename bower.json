@@ -1,0 +1,27 @@
+{
+  "name": "ng-coverflow",
+  "version": "0.1.0",
+  "homepage": "https://github.com/flammenmensch/ng-coverflow",
+  "authors": [
+    "Flammenmensch <maleventum@gmail.com>"
+  ],
+  "description": "Coverflow directive for AngularJS",
+  "main": "scripts/ng-coverflow.js",
+  "keywords": [
+    "coverflow",
+    "cover",
+    "flow",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.23"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "ng-coverflow",
+  "version": "0.1.0",
+  "description": "Coverflow directive for AngularJS",
+  "main": "scripts/ng-coverflow.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flammenmensch/ng-coverflow.git"
+  },
+  "keywords": [
+    "coverflow",
+    "cover",
+    "flow",
+    "angularjs"
+  ],
+  "author": "Flammenmensch <maleventum@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flammenmensch/ng-coverflow/issues"
+  },
+  "homepage": "https://github.com/flammenmensch/ng-coverflow",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-angular-templates": "^0.5.7",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.11.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-rev": "^0.1.0"
+  }
+}
