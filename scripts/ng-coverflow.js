@@ -59,13 +59,17 @@
                         return $scope.items && ($scope.selectedIndex < $scope.items.length - 1 || $scope.wrapAround === 'true');
                     };
 
-                    $scope.selectPrevious = function () {
+                    $scope.selectPrevious = function (event) {
+                        event.preventDefault();
+
                         if ($scope.hasPrevious()) {
                             $scope.selectIndex($scope.selectedIndex - 1);
                         }
                     };
 
-                    $scope.selectNext = function () {
+                    $scope.selectNext = function (event) {
+                        event.preventDefault();
+
                         if ($scope.hasNext()) {
                             $scope.selectIndex($scope.selectedIndex + 1);
                         }
