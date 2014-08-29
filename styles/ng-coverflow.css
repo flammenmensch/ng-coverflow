@@ -92,6 +92,10 @@
     text-decoration: none;
 }
 
+.ng-coverflow-nav:hover {
+    text-decoration: none;
+}
+
 .ng-coverflow-nav > i {
     display: block;
     height: 34px;
