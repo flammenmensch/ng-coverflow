@@ -60,7 +60,9 @@
                     };
 
                     $scope.selectPrevious = function (event) {
-                        event.preventDefault();
+                        if (event) {
+                            event.preventDefault();
+                        }
 
                         if ($scope.hasPrevious()) {
                             $scope.selectIndex($scope.selectedIndex - 1);
@@ -68,7 +70,9 @@
                     };
 
                     $scope.selectNext = function (event) {
-                        event.preventDefault();
+                        if (event) {
+                            event.preventDefault();
+                        }
 
                         if ($scope.hasNext()) {
                             $scope.selectIndex($scope.selectedIndex + 1);
@@ -112,9 +116,13 @@
                         event.preventDefault();
 
                         if (event.wheelDeltaY > 0) {
-                            scope.$apply(scope.selectPrevious);
+                            scope.$apply(function () {
+                                scope.selectPrevious()
+                            });
                         } else if (event.wheelDeltaY < 0) {
-                            scope.$apply(scope.selectNext);
+                            scope.$apply(function () {
+                                scope.selectNext();
+                            });
                         }
                     });
 
