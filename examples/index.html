@@ -33,7 +33,7 @@
 <script src="../scripts/ng-coverflow.js"></script>
 <script>
     (function (ng) {
-        ng.module('app', [ 'ng-coverflow' ])
+        ng.module('app', [ 'ng-coverflow', 'ng-coverflow.utils' ])
                 .controller('AppCtrl', [ '$scope', 'ngCoverflowItemFactory', function ($scope, itemFactory) {
                     $scope.selectedIndex = 0;
 
