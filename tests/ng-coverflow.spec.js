@@ -5,7 +5,7 @@ describe('ng-coverflow', function () {
 
     describe('ng-coverflow', function () {
 
-        it('should create ng-coverflow component', inject([ '$compile', '$rootScope', 'ngCoverflowItemFactory', function ($compile, $rootScope, itemFactory) {
+        it('should create ng-coverflow component', inject([ '$compile', '$rootScope', function ($compile, $rootScope) {
             var scope = $rootScope.$new();
 
             scope.header = 'This is coverflow';
@@ -17,13 +17,13 @@ describe('ng-coverflow', function () {
 
             expect(listItems.length).toEqual(0);
 
-            scope.items.push(itemFactory({ title: 'Item 0', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
-            scope.items.push(itemFactory({ title: 'Item 1', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
-            scope.items.push(itemFactory({ title: 'Item 2', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
-            scope.items.push(itemFactory({ title: 'Item 3', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
-            scope.items.push(itemFactory({ title: 'Item 4', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
-            scope.items.push(itemFactory({ title: 'Item 5', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
-            scope.items.push(itemFactory({ title: 'Item 6', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' }));
+            scope.items.push({ title: 'Item 0', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
+            scope.items.push({ title: 'Item 1', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
+            scope.items.push({ title: 'Item 2', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
+            scope.items.push({ title: 'Item 3', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
+            scope.items.push({ title: 'Item 4', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
+            scope.items.push({ title: 'Item 5', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
+            scope.items.push({ title: 'Item 6', subtitle: 'Subtitle', imageUrl: 'http://placekitten.com/g/200/200' });
 
             scope.$digest();
 
@@ -34,7 +34,7 @@ describe('ng-coverflow', function () {
 
             expect(templateAsHtml).toContain(scope.header);
             expect(listItems.length).toEqual(scope.items.length);
-            expect(directiveScope.selectedIndex).toEqual(Math.floor(scope.items.length / 2));;
+            expect(directiveScope.selectedIndex).toEqual(Math.floor(scope.items.length / 2));
         } ]));
     });
 

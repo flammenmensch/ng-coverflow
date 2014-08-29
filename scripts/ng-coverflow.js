@@ -1,7 +1,15 @@
 (function (ng) {
     'use strict';
 
-    ng.module('ng-coverflow', [ 'ng-coverflow.utils', 'ng-coverflow.models' ])
+    ng.module('ng-coverflow', [ ])
+
+        .directive('ngRepeatDone', [ function () {
+            return function (scope) {
+                if (scope.$last) {
+                    scope.$emit('ng-coverflow:ng-repeat-done');
+                }
+            };
+        } ])
 
         .directive('ngCoverflowDescription', [ function () {
             return {
