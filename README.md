@@ -80,6 +80,6 @@ angular.module('app', [ 'ng-coverflow.utils' ]).controller('AppCtrl', [ '$scope'
 
 ## Example usage
 
-```js
+```html
 <ng-coverflow header="This is coverflow" items="items" item-click="itemClickHandler(item)"></ng-coverflow>
 ```
