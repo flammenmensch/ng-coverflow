@@ -48,6 +48,7 @@
                     items:          '=items',
                     header:         '@',
                     selectedIndex:  '@',
+                    wrapAround:     '@',
                     itemClick:      '&'
                 },
                 controller: [ '$scope', function ($scope) {
