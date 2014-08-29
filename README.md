@@ -1,6 +1,20 @@
 # ng-coverflow
 ## CoverFlow directive for AngularJS
 
+## Installation
+### Install with bower
+```sh
+bower install ng-coverflow --save
+```
+### Install dev dependencies
+```sh
+npm install
+```
+### Run tests (uses Karma with PhantomJS)
+```sh
+npm test
+```
+
 ## Attributes
 
 ### header
