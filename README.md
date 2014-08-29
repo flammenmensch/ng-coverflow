@@ -7,7 +7,7 @@
 > Coverflow title text
 
 ### zoom
-> 
+> How far side elements will be pushed backwards (in pixels). Selected item is always displayed in original size (200x200 px).
 
 ### rotation
 > Rotation angle of side elements (in degrees)
@@ -19,7 +19,7 @@
 > Offset of side elements (in pixels)
 
 ### wrap-around
-> If true the coverflow becomes infinite (true/false)
+> If `true` the coverflow becomes infinite (`true` or `false`)
 
 ### items
 > Array of items (see below for item specification)
@@ -68,4 +68,4 @@ angular.module('app', [ 'ng-coverflow.utils' ]).controller('AppCtrl', [ '$scope'
 
 ```js
 <ng-coverflow header="This is coverflow" items="items" item-click="itemClickHandler(item)"></ng-coverflow>
-```
+`
