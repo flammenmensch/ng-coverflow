@@ -39,7 +39,7 @@
 ## Additional services
 
 ### ngCoverflowItemFactory
-> Factory function which creates directive-compatible data object. Defined in the module `ng-coverflow.models`.
+> Factory function which creates directive-compatible data object. Defined in the module `ng-coverflow.utils`.
 
 ### ngCoverflowItemAdapterFactory
 > If you'd like to use your own objects as a data source for coverflow you might wrap them with directive-compatible object using this service. You can then access original data via `source` property. Defined in the module `ng-coverflow.utils`.
