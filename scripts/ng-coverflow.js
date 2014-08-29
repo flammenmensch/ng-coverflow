@@ -118,7 +118,7 @@
 
                         if (event.wheelDeltaY > 0) {
                             scope.$apply(function () {
-                                scope.selectPrevious()
+                                scope.selectPrevious();
                             });
                         } else if (event.wheelDeltaY < 0) {
                             scope.$apply(function () {
