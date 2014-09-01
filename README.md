@@ -14,6 +14,10 @@ npm install
 ```sh
 npm test
 ```
+### Build with Grunt
+```sh
+grunt
+```
 
 ## Attributes
 
