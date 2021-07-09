@@ -47,7 +47,7 @@
                 scope: {
                     items:          '=items',
                     header:         '@',
-                    selectedIndex:  '@',
+                    selectedIndex:  '=?',
                     wrapAround:     '@',
                     itemClick:      '&'
                 },
